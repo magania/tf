@@ -11,7 +11,7 @@ chmod u+x cuda.run
 
 sudo apt-get install -y gcc g++ python3 python3-dev python3-pip
 sudo pip3 install --upgrade pip
-sudo ./cuda.run --silent --toolkit
+sudo ./cuda.run --silent --driver --toolkit
 cd /usr/local/ && sudo tar xzf ~/${CUDNN_TGZ} && cd
 
 sudo pip3 install --upgrade -r requirements.txt
