@@ -6,7 +6,7 @@ TENSORFLOW_WHEEL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_
 
 # echo ${SSH_PUB_KEY} >> .ssh/authorized_keys
 sudo apt-get update
-sudo apt-get install -y gcc g++ python3 python3-dev python3-pip tmux vim
+sudo apt-get install -y linux-headers-$(uname -r) gcc g++ python3 python3-dev python3-pip tmux vim
 
 wget -Nc --show-progress ${CUDA_DOWNLOAD_LINK} -O cuda.run
 wget -Nc --show-progress ${CUDNN_DOWNLOAD_LINK} -O cudnn.tgz
