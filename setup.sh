@@ -2,6 +2,7 @@
 
 CUDA_DOWNLOAD_LINK=https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda_8.0.61_375.26_linux-run
 TENSORFLOW_WHEEL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.1-cp34-cp34m-linux_x86_64.whl
+CUDNN_TGZ=cudnn-8.0-linux-x64-v5.1.tgz
 
 # echo ${SSH_PUB_KEY} >> .ssh/authorized_keys
 
