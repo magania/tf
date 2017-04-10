@@ -5,15 +5,15 @@ TENSORFLOW_WHEEL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_
 CUDNN_TGZ=cudnn-8.0-linux-x64-v5.1.tgz
 
 # echo ${SSH_PUB_KEY} >> .ssh/authorized_keys
+sudo apt-get install -y gcc g++ python3 python3-dev python3-pip tmux vim
 
 wget -Nc --show-progress ${CUDA_DOWNLOAD_LINK} -O cuda.run
 chmod u+x cuda.run
 
-sudo apt-get install -y gcc g++ python3 python3-dev python3-pip
-sudo pip3 install --upgrade pip
 sudo ./cuda.run --silent --driver --toolkit
 cd /usr/local/ && sudo tar xzf ~/${CUDNN_TGZ} && cd
 
+sudo pip3 install --upgrade pip
 sudo pip3 install --upgrade -r requirements.txt
 sudo pip3 install --upgrade ${TENSORFLOW_WHEEL}
 
